@@ -7,10 +7,10 @@
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <!-- title of site -->
-	<title>당신이 원하는 모든 중고 상품! 판당으로 오세요!</title>
+	<title>모두 판당</title>
 
 	<!-- For favicon png -->
-	<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png" />
+	<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.jpg" />
 
 	<!--font-awesome.min.css-->
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -42,7 +42,6 @@
 
 </head>
 <body>
-	<!-- top-area Start -->
 	<section class="top-area">
 		<div class="header-area">
 			<!-- Start Navigation -->
@@ -51,67 +50,53 @@
 				
 				<div class="container">
 
-					<!-- Start Header Navigation -->
+					<!--  상단 네비게이션바 시작 -->
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 							<i class="fa fa-bars"></i>
 						</button>
-						<a class="navbar-brand" href="#home">pan<span>dang</span></a>
-
+						<a class="navbar-brand" href="#home">PAN<span>DANG</span></a>
 					</div><!--/.navbar-header-->
-					<!-- End Header Navigation -->
-
+					
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 						<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-							<li class="scroll"><a href="#explore">등록</a></li>
-							<li class="scroll"><a href="#reviews">내상점</a></li>
-							<li class="scroll"><a href="#blog">채팅</a></li>
-							<li class="scroll"><a href="#contact">로그인/회원가입</a></li>
+							<li><a href="">상품등록</a></li>
+							<li><a href="">내상점</a></li>
+							<li><a href="">채팅하기</a></li>
+							<li><a href="">로그인/회원가입</a></li>
 						</ul><!--/.nav -->
 					</div><!-- /.navbar-collapse -->
 				</div><!--/.container-->
 			</nav><!--/nav-->
-			<!-- End Navigation -->
+			<!--  상단 네비게이션바 끝 -->
+			
 		</div><!--/.header-area-->
 		<div class="clearfix"></div>
-
 	</section><!-- /.top-area-->
-	<!-- top-area End -->
+	
+	<!--메인 배너 시작 -->
+	<section id="home" class="main-banner">
+	</section>
+	<!--메인 배너 끝 -->
 
-	<!--welcome-hero start -->
-	<section id="home" class="welcome-hero">
-		<div class="container">
-			<div class="welcome-hero-txt">
-			</div>
-		</div>
-
-	</section><!--/.welcome-hero-->
-	<!--welcome-hero end -->
-
-	<!--explore start -->
-	<section id="explore" class="explore">
+	<!--상품 시작 -->
+	<section id="product" class="product">
 		<div class="container">
 			<div class="section-header">
 				<h2>최신매물</h2>
 			</div><!--/.section-header-->
-			<div class="explore-content">
+			<div class="product-content">
 				<div class="row">
-					<div class=" col-md-4 col-sm-6">
-						<div class="single-explore-item">
-							<div class="single-explore-img">
-								<img src="assets/images/explore/e1.jpg" alt="explore image">
-								<div class="single-explore-img-info">
-									<button onclick="window.location.href='#'">best rated</button>
-									<div class="single-explore-image-icon-box">
+					<div class="col-md-4 col-sm-6">
+						<div class="single-product-item">
+							<div class="single-product-img">
+								<img src="assets/images/product/p1.jpg" alt="product image">
+								<div class="single-product-img-info">
+									<div class="single-product-image-icon-box">
 										<ul>
 											<li>
-												<div class="single-explore-image-icon">
-													<i class="fa fa-arrows-alt"></i>
-												</div>
-											</li>
-											<li>
-												<div class="single-explore-image-icon">
+												<div class="single-explore-image-icon" onclick="window.location.href='#'">
 													<i class="fa fa-bookmark-o"></i>
 												</div>
 											</li>
@@ -119,44 +104,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="single-explore-txt bg-theme-1">
-								<h2><a href="#">tommy helfinger bar</a></h2>
-								<p class="explore-rating-price">
-									<span class="explore-rating">5.0</span>
-									<a href="#"> 10 ratings</a>
-									<span class="explore-price-box">
-										form
-										<span class="explore-price">5$-300$</span>
-									</span>
-									<a href="#">resturent</a>
-								</p>
-								<div class="explore-person">
-									<div class="row">
-										<div class="col-sm-2">
-											<div class="explore-person-img">
-												<a href="#">
-													<img src="assets/images/explore/person.png" alt="explore person">
-												</a>
-											</div>
-										</div>
-										<div class="col-sm-10">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incid ut labore et dolore magna aliqua....
-											</p>
-										</div>
-									</div>
-								</div>
+							<div class="single-product-txt">
+								<h3><a href="#">후드티</a></h3>
 								<div class="explore-open-close-part">
 									<div class="row">
 										<div class="col-sm-5">
-											<button class="close-btn" onclick="window.location.href='#'">close
-												now</button>
+											<button class="price" onclick="window.location.href='#'">30,000원</button>
 										</div>
 										<div class="col-sm-7">
-											<div class="explore-map-icon">
-												<a href="#"><i data-feather="map-pin"></i></a>
-												<a href="#"><i data-feather="upload"></i></a>
+											<div class="product-map-icon">
 												<a href="#"><i data-feather="heart"></i></a>
 											</div>
 										</div>
@@ -166,20 +122,14 @@
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
-						<div class="single-explore-item">
-							<div class="single-explore-img">
-								<img src="assets/images/explore/e2.jpg" alt="explore image">
-								<div class="single-explore-img-info">
-									<button onclick="window.location.href='#'">featured</button>
-									<div class="single-explore-image-icon-box">
+						<div class="single-product-item">
+							<div class="single-product-img">
+								<img src="assets/images/product/p2.jpg" alt="explore image">
+								<div class="single-product-img-info">
+									<div class="single-product-image-icon-box">
 										<ul>
 											<li>
-												<div class="single-explore-image-icon">
-													<i class="fa fa-arrows-alt"></i>
-												</div>
-											</li>
-											<li>
-												<div class="single-explore-image-icon">
+												<div class="single-explore-image-icon" onclick="window.location.href='#'">
 													<i class="fa fa-bookmark-o"></i>
 												</div>
 											</li>
@@ -187,44 +137,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="single-explore-txt bg-theme-2">
-								<h2><a href="#">swim and dine resort</a></h2>
-								<p class="explore-rating-price">
-									<span class="explore-rating">4.5</span>
-									<a href="#"> 8 ratings</a>
-									<span class="explore-price-box">
-										form
-										<span class="explore-price">50$-500$</span>
-									</span>
-									<a href="#">hotel</a>
-								</p>
-								<div class="explore-person">
-									<div class="row">
-										<div class="col-sm-2">
-											<div class="explore-person-img">
-												<a href="#">
-													<img src="assets/images/explore/person.png" alt="explore person">
-												</a>
-											</div>
-										</div>
-										<div class="col-sm-10">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incid ut labore et dolore magna aliqua....
-											</p>
-										</div>
-									</div>
-								</div>
+							<div class="single-product-txt">
+								<h2><a href="#">아이폰</a></h2>
 								<div class="explore-open-close-part">
 									<div class="row">
 										<div class="col-sm-5">
-											<button class="close-btn open-btn" onclick="window.location.href='#'">open
-												now</button>
+											<button class="price" onclick="window.location.href='#'">700,000원</button>
 										</div>
 										<div class="col-sm-7">
-											<div class="explore-map-icon">
-												<a href="#"><i data-feather="map-pin"></i></a>
-												<a href="#"><i data-feather="upload"></i></a>
+											<div class="product-map-icon">
 												<a href="#"><i data-feather="heart"></i></a>
 											</div>
 										</div>
@@ -234,20 +155,14 @@
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
-						<div class="single-explore-item">
-							<div class="single-explore-img">
-								<img src="assets/images/explore/e3.jpg" alt="explore image">
-								<div class="single-explore-img-info">
-									<button onclick="window.location.href='#'">best rated</button>
-									<div class="single-explore-image-icon-box">
+						<div class="single-product-item">
+							<div class="single-product-img">
+								<img src="assets/images/product/p3.jpg" alt="explore image">
+								<div class="single-product-img-info">
+									<div class="single-product-image-icon-box">
 										<ul>
 											<li>
-												<div class="single-explore-image-icon">
-													<i class="fa fa-arrows-alt"></i>
-												</div>
-											</li>
-											<li>
-												<div class="single-explore-image-icon">
+												<div class="single-explore-image-icon" onclick="window.location.href='#'">
 													<i class="fa fa-bookmark-o"></i>
 												</div>
 											</li>
@@ -255,112 +170,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="single-explore-txt bg-theme-3">
-								<h2><a href="#">europe tour</a></h2>
-								<p class="explore-rating-price">
-									<span class="explore-rating">5.0</span>
-									<a href="#"> 15 ratings</a>
-									<span class="explore-price-box">
-										form
-										<span class="explore-price">5k$-10k$</span>
-									</span>
-									<a href="#">destination</a>
-								</p>
-								<div class="explore-person">
-									<div class="row">
-										<div class="col-sm-2">
-											<div class="explore-person-img">
-												<a href="#">
-													<img src="assets/images/explore/person.png" alt="explore person">
-												</a>
-											</div>
-										</div>
-										<div class="col-sm-10">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incid ut labore et dolore magna aliqua....
-											</p>
-										</div>
-									</div>
-								</div>
+							<div class="single-product-txt">
+								<h2><a href="#">자켓</a></h2>
 								<div class="explore-open-close-part">
 									<div class="row">
 										<div class="col-sm-5">
-											<button class="close-btn" onclick="window.location.href='#'">close
-												now</button>
+											<button class="price" onclick="window.location.href='#'">100,000원</button>
 										</div>
 										<div class="col-sm-7">
-											<div class="explore-map-icon">
-												<a href="#"><i data-feather="map-pin"></i></a>
-												<a href="#"><i data-feather="upload"></i></a>
-												<a href="#"><i data-feather="heart"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class=" col-md-4 col-sm-6">
-						<div class="single-explore-item">
-							<div class="single-explore-img">
-								<img src="assets/images/explore/e4.jpg" alt="explore image">
-								<div class="single-explore-img-info">
-									<button onclick="window.location.href='#'">most view</button>
-									<div class="single-explore-image-icon-box">
-										<ul>
-											<li>
-												<div class="single-explore-image-icon">
-													<i class="fa fa-arrows-alt"></i>
-												</div>
-											</li>
-											<li>
-												<div class="single-explore-image-icon">
-													<i class="fa fa-bookmark-o"></i>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="single-explore-txt bg-theme-4">
-								<h2><a href="#">banglow with swiming pool</a></h2>
-								<p class="explore-rating-price">
-									<span class="explore-rating">5.0</span>
-									<a href="#"> 10 ratings</a>
-									<span class="explore-price-box">
-										form
-										<span class="explore-price">10k$-15k$</span>
-									</span>
-									<a href="#">real estate</a>
-								</p>
-								<div class="explore-person">
-									<div class="row">
-										<div class="col-sm-2">
-											<div class="explore-person-img">
-												<a href="#">
-													<img src="assets/images/explore/person.png" alt="explore person">
-												</a>
-											</div>
-										</div>
-										<div class="col-sm-10">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incid ut labore et dolore magna aliqua....
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="explore-open-close-part">
-									<div class="row">
-										<div class="col-sm-5">
-											<button class="close-btn" onclick="window.location.href='#'">close
-												now</button>
-										</div>
-										<div class="col-sm-7">
-											<div class="explore-map-icon">
-												<a href="#"><i data-feather="map-pin"></i></a>
-												<a href="#"><i data-feather="upload"></i></a>
+											<div class="product-map-icon">
 												<a href="#"><i data-feather="heart"></i></a>
 											</div>
 										</div>
@@ -370,20 +188,14 @@
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
-						<div class="single-explore-item">
-							<div class="single-explore-img">
-								<img src="assets/images/explore/e5.jpg" alt="explore image">
-								<div class="single-explore-img-info">
-									<button onclick="window.location.href='#'">featured</button>
-									<div class="single-explore-image-icon-box">
+						<div class="single-product-item">
+							<div class="single-product-img">
+								<img src="assets/images/product/p4.jpg" alt="explore image">
+								<div class="single-product-img-info">
+									<div class="single-product-image-icon-box">
 										<ul>
 											<li>
-												<div class="single-explore-image-icon">
-													<i class="fa fa-arrows-alt"></i>
-												</div>
-											</li>
-											<li>
-												<div class="single-explore-image-icon">
+												<div class="single-explore-image-icon" onclick="window.location.href='#'">
 													<i class="fa fa-bookmark-o"></i>
 												</div>
 											</li>
@@ -391,44 +203,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="single-explore-txt bg-theme-2">
-								<h2><a href="#">vintage car expo</a></h2>
-								<p class="explore-rating-price">
-									<span class="explore-rating">4.2</span>
-									<a href="#"> 8 ratings</a>
-									<span class="explore-price-box">
-										form
-										<span class="explore-price">500$-1200$</span>
-									</span>
-									<a href="#">automotion</a>
-								</p>
-								<div class="explore-person">
-									<div class="row">
-										<div class="col-sm-2">
-											<div class="explore-person-img">
-												<a href="#">
-													<img src="assets/images/explore/person.png" alt="explore person">
-												</a>
-											</div>
-										</div>
-										<div class="col-sm-10">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incid ut labore et dolore magna aliqua....
-											</p>
-										</div>
-									</div>
-								</div>
+							<div class="single-product-txt">
+								<h2><a href="#">갤럭시폰</a></h2>
 								<div class="explore-open-close-part">
 									<div class="row">
 										<div class="col-sm-5">
-											<button class="close-btn open-btn" onclick="window.location.href='#'">open
-												now</button>
+											<button class="price" onclick="window.location.href='#'">500,000원</button>
 										</div>
 										<div class="col-sm-7">
-											<div class="explore-map-icon">
-												<a href="#"><i data-feather="map-pin"></i></a>
-												<a href="#"><i data-feather="upload"></i></a>
+											<div class="product-map-icon">
 												<a href="#"><i data-feather="heart"></i></a>
 											</div>
 										</div>
@@ -438,20 +221,14 @@
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
-						<div class="single-explore-item">
-							<div class="single-explore-img">
-								<img src="assets/images/explore/e6.jpg" alt="explore image">
-								<div class="single-explore-img-info">
-									<button onclick="window.location.href='#'">best rated</button>
-									<div class="single-explore-image-icon-box">
+						<div class="single-product-item">
+							<div class="single-product-img">
+								<img src="assets/images/product/p5.jpg" alt="explore image">
+								<div class="single-product-img-info">
+									<div class="single-product-image-icon-box">
 										<ul>
 											<li>
-												<div class="single-explore-image-icon">
-													<i class="fa fa-arrows-alt"></i>
-												</div>
-											</li>
-											<li>
-												<div class="single-explore-image-icon">
+												<div class="single-explore-image-icon" onclick="window.location.href='#'">
 													<i class="fa fa-bookmark-o"></i>
 												</div>
 											</li>
@@ -459,44 +236,48 @@
 									</div>
 								</div>
 							</div>
-							<div class="single-explore-txt bg-theme-5">
-								<h2><a href="#">thailand tour</a></h2>
-								<p class="explore-rating-price">
-									<span class="explore-rating">5.0</span>
-									<a href="#"> 15 ratings</a>
-									<span class="explore-price-box">
-										form
-										<span class="explore-price">5k$-10k$</span>
-									</span>
-									<a href="#">destination</a>
-								</p>
-								<div class="explore-person">
-									<div class="row">
-										<div class="col-sm-2">
-											<div class="explore-person-img">
-												<a href="#">
-													<img src="assets/images/explore/person.png" alt="explore person">
-												</a>
-											</div>
-										</div>
-										<div class="col-sm-10">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incid ut labore et dolore magna aliqua....
-											</p>
-										</div>
-									</div>
-								</div>
+							<div class="single-product-txt">
+								<h2><a href="#">신발</a></h2>
 								<div class="explore-open-close-part">
 									<div class="row">
 										<div class="col-sm-5">
-											<button class="close-btn" onclick="window.location.href='#'">close
-												now</button>
+											<button class="price" onclick="window.location.href='#'">200,000원</button>
 										</div>
 										<div class="col-sm-7">
-											<div class="explore-map-icon">
-												<a href="#"><i data-feather="map-pin"></i></a>
-												<a href="#"><i data-feather="upload"></i></a>
+											<div class="product-map-icon">
+												<a href="#"><i data-feather="heart"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-product-item">
+							<div class="single-product-img">
+								<img src="assets/images/product/p6.jpg" alt="explore image">
+								<div class="single-product-img-info">
+									<div class="single-product-image-icon-box">
+										<ul>
+											<li>
+												<div class="single-explore-image-icon" onclick="window.location.href='#'">
+													<i class="fa fa-bookmark-o"></i>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="single-product-txt">
+								<h2><a href="#">랜턴</a></h2>
+								<div class="explore-open-close-part">
+									<div class="row">
+										<div class="col-sm-5">
+											<button class="price" onclick="window.location.href='#'">100,000원</button>
+										</div>
+										<div class="col-sm-7">
+											<div class="product-map-icon">
 												<a href="#"><i data-feather="heart"></i></a>
 											</div>
 										</div>
@@ -510,61 +291,43 @@
 		</div><!--/.container-->
 
 	</section><!--/.explore-->
-	<!--explore end -->
+	<!--상품 끝 -->
 
-	<!--footer start-->
+	<!--하단바 시작-->
 	<footer id="footer" class="footer">
 		<div class="container">
 			<div class="footer-menu">
 				<div class="row">
 					<div class="col-sm-3">
 						<div class="navbar-header">
-							<a class="navbar-brand" href="index.html">list<span>race</span></a>
+							<a class="navbar-brand" href="">PAN<span>DANG</span></a>
 						</div><!--/.navbar-header-->
+						
+						<div class="navbar-header">
+							<br>
+							<p>© PANDANG all rights reserved</p>
+						</div>
+						
 					</div>
 					<div class="col-sm-9">
 						<ul class="footer-menu-item">
-							<li class="scroll"><a href="#works">how it works</a></li>
-							<li class="scroll"><a href="#explore">explore</a></li>
-							<li class="scroll"><a href="#reviews">review</a></li>
-							<li class="scroll"><a href="#blog">blog</a></li>
-							<li class="scroll"><a href="#contact">contact</a></li>
-							<li class=" scroll"><a href="#contact">my account</a></li>
+							<li><a href="mailto:jhpark1@gmail.com">박정현</a></li>
+							<li><a href="mailto:spilite@naver.com">강해마루</a></li>
+							<li><a href="mailto:gmltmd189@gmail.com">권도해</a></li>
+							<li><a href="mailto:myteo979797@gmail.com">김민재</a></li>
 						</ul><!--/.nav -->
 					</div>
 				</div>
 			</div>
-			<div class="hm-footer-copyright">
-				<div class="row">
-					<div class="col-sm-5">
-						<p>
-							판당 테스트 버전
-						</p><!--/p-->
-					</div>
-					<div class="col-sm-7">
-						<div class="footer-social">
-							<span><i class="fa fa-phone"> +1 (222) 777 8888</i></span>
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-linkedin"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-						</div>
-					</div>
-				</div>
-
-			</div><!--/.hm-footer-copyright-->
 		</div><!--/.container-->
-
 		<div id="scroll-Top">
 			<div class="return-to-top">
 				<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title=""
 					data-original-title="Back to Top" aria-hidden="true"></i>
 			</div>
-
-		</div><!--/.scroll-Top-->
-
-	</footer><!--/.footer-->
-	<!--footer end-->
+		</div>
+	</footer>
+	<!--하단바 끝-->
 
 	<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
