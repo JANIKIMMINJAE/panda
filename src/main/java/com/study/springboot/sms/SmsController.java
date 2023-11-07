@@ -1,4 +1,4 @@
-package com.study.springboot;
+package com.study.springboot.sms;
 
 import java.util.Random;
 
@@ -13,7 +13,7 @@ import net.nurigo.sdk.message.response.SingleMessageSentResponse;
 import net.nurigo.sdk.message.service.DefaultMessageService;
 
 @RestController
-public class MyController {	
+public class SmsController {	
 	@RequestMapping("/")
 	public String root() throws Exception{
 		return "mainhome";
@@ -21,7 +21,7 @@ public class MyController {
 
     final DefaultMessageService messageService;
 
-    public MyController() {
+    public SmsController() {
         // 반드시 계정 내 등록된 유효한 API 키, API Secret Key를 입력해주셔야 합니다!
 //        this.messageService = NurigoApp.INSTANCE.initialize("INSERT_API_KEY", "INSERT_API_SECRET_KEY", "https://api.coolsms.co.kr");
         this.messageService = NurigoApp.INSTANCE.initialize("NCSDIVIZDIRQQXR5", "O3HXJKE1F2DA18O3FCOIX6IFQ69POPLY", "https://api.coolsms.co.kr");
