@@ -54,22 +54,27 @@ public class MyController {
 	@RequestMapping("/write")
 	public String write(HttpServletRequest request, Model model)
 	{
-		String sName = request.getParameter("writer");
-		String sTitle = request.getParameter("title");
-		String sContent =  request.getParameter("content");
+		String user_seq = request.getParameter("writer");
+		String prd_title = request.getParameter("title");
+		String prd_ctnt =  request.getParameter("content");
+		String prd_at = request.getParameter("writer");
+		String prd_hit = request.getParameter("title");
+		String prd_latitude =  request.getParameter("content");
+		String prd_longitude = request.getParameter("writer");
+		String prd_address = request.getParameter("title");
+		String prd_maptext =  request.getParameter("content");
 		
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("item1", sName);
-		map.put("item2", sTitle);
-		map.put("item3", sContent);
-		map.put("item4", sName);
-		map.put("item5", sTitle);
-		map.put("item6", sContent);
-		map.put("item7", sName);
-		map.put("item8", sTitle);
-		map.put("item9", sContent);
-		map.put("item10", sContent);
-		map.put("item11", sContent);
+		map.put("item1", user_seq);
+		map.put("item2", prd_title);
+		map.put("item3", prd_ctnt);
+		map.put("item4", prd_at);
+		map.put("item5", prd_hit);
+		map.put("item6", prd_latitude);
+		map.put("item7", prd_longitude);
+		map.put("item8", prd_address);
+		map.put("item9", prd_maptext);
+
 		
 		int nResult = dao.writeDao(map);
 		System.out.println("Write : " + nResult);
