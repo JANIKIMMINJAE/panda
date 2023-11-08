@@ -61,8 +61,17 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 						<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+							<li>
+								<form action="https://search.naver.com/search.naver">
+									<div class="search-form">
+						  				<input type="text" name="query" placeholder="상품이나 지역을 검색해보세요">
+						  					<button type="submit"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></button>
+									</div>
+								</form>
+							</li>
 							<li><a href="">상품등록</a></li>
 							<li><a href="">내상점</a></li>
+							<li><a href="">찜</a></li>
 							<li><a href="">채팅하기</a></li>
 							<li><a href="">로그인/회원가입</a></li>
 						</ul><!--/.nav -->
@@ -88,209 +97,130 @@
 			</div><!--/.section-header-->
 			<div class="product-content">
 				<div class="row">
-					<div class="col-md-4 col-sm-6">
+					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
 						<div class="single-product-item">
 							<div class="single-product-img">
 								<img src="assets/images/product/p1.jpg" alt="product image">
-								<div class="single-product-img-info">
-									<div class="single-product-image-icon-box">
-										<ul>
-											<li>
-												<div class="single-explore-image-icon" onclick="window.location.href='#'">
-													<i class="fa fa-bookmark-o"></i>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</div>
 							<div class="single-product-txt">
-								<h3><a href="#">후드티</a></h3>
-								<div class="explore-open-close-part">
-									<div class="row">
-										<div class="col-sm-5">
-											<button class="price" onclick="window.location.href='#'">30,000원</button>
-										</div>
-										<div class="col-sm-7">
-											<div class="product-map-icon">
-												<a href="#"><i data-feather="heart"></i></a>
-											</div>
+								<div class="product-name">후드티</div>
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="product-price">30,000원</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="product-map-icon">
+											<a href="#"><i data-feather="heart"></i></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
+					</button>
+					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
 						<div class="single-product-item">
 							<div class="single-product-img">
 								<img src="assets/images/product/p2.jpg" alt="explore image">
-								<div class="single-product-img-info">
-									<div class="single-product-image-icon-box">
-										<ul>
-											<li>
-												<div class="single-explore-image-icon" onclick="window.location.href='#'">
-													<i class="fa fa-bookmark-o"></i>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</div>
 							<div class="single-product-txt">
-								<h2><a href="#">아이폰</a></h2>
-								<div class="explore-open-close-part">
-									<div class="row">
-										<div class="col-sm-5">
-											<button class="price" onclick="window.location.href='#'">700,000원</button>
-										</div>
-										<div class="col-sm-7">
-											<div class="product-map-icon">
-												<a href="#"><i data-feather="heart"></i></a>
-											</div>
+								<div class="product-name">아이폰</div>
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="product-price">700,000원</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="product-map-icon">
+											<a href="#"><i data-feather="heart"></i></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
+					</button>
+					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
 						<div class="single-product-item">
 							<div class="single-product-img">
 								<img src="assets/images/product/p3.jpg" alt="explore image">
-								<div class="single-product-img-info">
-									<div class="single-product-image-icon-box">
-										<ul>
-											<li>
-												<div class="single-explore-image-icon" onclick="window.location.href='#'">
-													<i class="fa fa-bookmark-o"></i>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</div>
 							<div class="single-product-txt">
-								<h2><a href="#">자켓</a></h2>
-								<div class="explore-open-close-part">
-									<div class="row">
-										<div class="col-sm-5">
-											<button class="price" onclick="window.location.href='#'">100,000원</button>
-										</div>
-										<div class="col-sm-7">
-											<div class="product-map-icon">
-												<a href="#"><i data-feather="heart"></i></a>
-											</div>
+								<div class="product-name">자켓</div>
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="product-price">100,000원</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="product-map-icon">
+											<a href="#"><i data-feather="heart"></i></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
+					</button>
+					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
 						<div class="single-product-item">
 							<div class="single-product-img">
 								<img src="assets/images/product/p4.jpg" alt="explore image">
-								<div class="single-product-img-info">
-									<div class="single-product-image-icon-box">
-										<ul>
-											<li>
-												<div class="single-explore-image-icon" onclick="window.location.href='#'">
-													<i class="fa fa-bookmark-o"></i>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</div>
 							<div class="single-product-txt">
-								<h2><a href="#">갤럭시폰</a></h2>
-								<div class="explore-open-close-part">
-									<div class="row">
-										<div class="col-sm-5">
-											<button class="price" onclick="window.location.href='#'">500,000원</button>
-										</div>
-										<div class="col-sm-7">
-											<div class="product-map-icon">
-												<a href="#"><i data-feather="heart"></i></a>
-											</div>
+								<div class="product-name">갤럭시폰</div>
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="product-price">500,000원</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="product-map-icon">
+											<a href="#"><i data-feather="heart"></i></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
+					</button>
+					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
 						<div class="single-product-item">
 							<div class="single-product-img">
 								<img src="assets/images/product/p5.jpg" alt="explore image">
-								<div class="single-product-img-info">
-									<div class="single-product-image-icon-box">
-										<ul>
-											<li>
-												<div class="single-explore-image-icon" onclick="window.location.href='#'">
-													<i class="fa fa-bookmark-o"></i>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</div>
 							<div class="single-product-txt">
-								<h2><a href="#">신발</a></h2>
-								<div class="explore-open-close-part">
-									<div class="row">
-										<div class="col-sm-5">
-											<button class="price" onclick="window.location.href='#'">200,000원</button>
-										</div>
-										<div class="col-sm-7">
-											<div class="product-map-icon">
-												<a href="#"><i data-feather="heart"></i></a>
-											</div>
+								<div class="product-name">신발</div>
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="product-price">200,000원</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="product-map-icon">
+											<a href="#"><i data-feather="heart"></i></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
+					</button>
+					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
 						<div class="single-product-item">
 							<div class="single-product-img">
 								<img src="assets/images/product/p6.jpg" alt="explore image">
-								<div class="single-product-img-info">
-									<div class="single-product-image-icon-box">
-										<ul>
-											<li>
-												<div class="single-explore-image-icon" onclick="window.location.href='#'">
-													<i class="fa fa-bookmark-o"></i>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
 							</div>
 							<div class="single-product-txt">
-								<h2><a href="#">랜턴</a></h2>
-								<div class="explore-open-close-part">
-									<div class="row">
-										<div class="col-sm-5">
-											<button class="price" onclick="window.location.href='#'">100,000원</button>
-										</div>
-										<div class="col-sm-7">
-											<div class="product-map-icon">
-												<a href="#"><i data-feather="heart"></i></a>
-											</div>
+								<div class="product-name">랜턴</div>
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="product-price">100,000원</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="product-map-icon">
+											<a href="#"><i data-feather="heart"></i></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</button>
 				</div>
 			</div>
 		</div><!--/.container-->
-
-	</section><!--/.explore-->
+	</section>
 	<!--상품 끝 -->
 
 	<!--하단바 시작-->
@@ -356,6 +286,7 @@
 
 	<!--Custom JS-->
 	<script src="assets/js/custom.js"></script>
+	
 
 </body>
 </html>

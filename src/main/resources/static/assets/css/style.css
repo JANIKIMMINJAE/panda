@@ -133,6 +133,31 @@ nav.navbar.bootsnav {
 .wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:hover,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:focus {padding:30px 0px;}
 /*.navbar-brand*/
 
+/* 검색창 */
+.search-form {
+  position: relative;
+  top: 22px;
+  width: 500px;
+  right: 13px;
+  color: rgb(0, 0, 0);
+}
+
+.search-form input {
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.search-form img {
+  position : absolute;
+  width: 17px;
+  top: 12px;
+  right: 12px;
+  margin: 0;
+}
+
 /*.nav li*/
 /* 네비게이션바 글자색 설정 */
 nav.navbar.bootsnav ul.nav > li > a {
@@ -189,6 +214,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 /*-------------------------------------
         3.  Main-banner
 --------------------------------------*/
+/*
 .main-banner {
     position: relative;
     background:url(../images/main-banner/banner.jpg)no-repeat;
@@ -197,6 +223,38 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     text-align: center;
     height:500px;
     z-index: 1;
+}
+*/
+.main-banner {
+  background: url("../images/main-banner/m1.jpg"), url("../images/main-banner/m2.jpg"), url("../images/main-banner/m3.jpg");
+  background-size: cover; /* 이미지를 화면에 맞게 확대/축소 */
+  background-attachment: fixed; /* 스크롤에 고정되도록 설정 */
+
+  /* 이미지 간겅의 간격 및 위치 조절 */
+  background-position: top left, top right, bottom right;
+
+  /* 이미지 반복 설정: 이미지 1부터 순차적으로 반복 */
+  background-repeat: repeat, repeat, repeat;
+}
+
+#prev-button,
+#next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#prev-button {
+  left: 10px;
+}
+
+#next-button {
+  right: 10px;
 }
 
 /*-------------------------------------
@@ -235,56 +293,37 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     height: 100%;
     background: rgba(162,172,177,.2);
 }
-
-/* 상품 찜 애니메이션 설정 */
-.single-product-img-info {
-    position: absolute;
-    bottom:-20px;
-    left: 0;
-    width: 100%;
-    opacity:0;
-    visibility:hidden;
-    -webkit-transition: .3s linear;
-    -moz-transition: .3s linear;
-    -ms-transition: .3s linear;
-    -o-transition: .3s linear;
-    transition: .3s linear;
-}
-
-.single-product-item:hover .single-product-img-info{
-    opacity:1;
-    visibility:visible;
-    bottom:0px
-}
-.single-product-image-icon-box {
-    text-align: right;
-    position: absolute;
-    bottom: 10px;
-    right:  10px;
-}
-.single-product-image-icon-box ul li {
-    display:  inline-block;
-    width: 30px;
-    height:  28px;
-    line-height:  28px;
-    background: #252d32;
-    text-align:  center;
-    margin-left:  5px;
-    color:  #cbcccd;
-}
-.single-product-image-icon-box ul li:hover i{color: rgb(255, 0, 0);}
-
-/* 메인 상품 설명 간격 */
+/* 메인페이지 상품 설명 간격 */
 .single-product-txt {
     padding: 26px 25px 24px 15px;
 }
-.product-price {color: rgb(0, 0, 0);}
-.product-address {color: rgb(192, 192, 192);}
+.product-name {
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+.product-price {
+	color: rgb(128, 128, 128);
+	line-height: normal;
+	font-size: 15px;
+    font-weight: normal;
+    text-align: left;
+}
+.product-address {
+	color: rgb(128, 128, 128);
+	line-height: normal;
+	font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+}
+.product-map-icon{
+	text-align: right;
+	}
 
-.product-map-icon{text-align: right;}
 .product-map-icon a svg {
-    width: 12px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     margin-left: 23px;
     color: #767f86;
 }
@@ -398,4 +437,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+
+
+
+/* ----------------------------------------------------- */
+
+
+
+
+
 /*========================Thank you=================
