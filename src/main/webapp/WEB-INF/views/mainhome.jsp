@@ -24,10 +24,6 @@
 	<!--flaticon.css-->
 	<link rel="stylesheet" href="assets/css/flaticon.css">
 
-	<!--slick.css-->
-	<link rel="stylesheet" href="assets/css/slick.css">
-	<link rel="stylesheet" href="assets/css/slick-theme.css">
-
 	<!--bootstrap.min.css-->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
@@ -97,26 +93,83 @@
 			</div><!--/.section-header-->
 			<div class="product-content">
 				<div class="row">
-					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
-						<div class="single-product-item">
-							<div class="single-product-img">
-								<img src="assets/images/product/p1.jpg" alt="product image">
-							</div>
-							<div class="single-product-txt">
-								<div class="product-name">후드티</div>
-								<div class="row">
-									<div class="col-sm-5">
-										<div class="product-price">30,000원</div>
-									</div>
-									<div class="col-sm-7">
-										<div class="product-map-icon">
-											<a href="#"><i data-feather="heart"></i></a>
+						
+					<!--  
+					<c:forEach items="${list}" var="dto">
+						<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
+							<div class="single-product-item">
+								<div class="single-product-img">
+									<c:choose>
+										<c:when test="${empty dto.prd_image}">
+							                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default Image" width="300">
+							            </c:when>
+							            <c:otherwise>
+							                <img src="${pageContext.request.contextPath}/upload/${dto.prd_image}" alt="Product Image" width="300">
+							            </c:otherwise>
+							        </c:choose>
+								</div>
+								<div class="single-product-txt">
+									<div class="product-name">${dto.prd_title}</div>
+									<div class="row">
+										<div class="col-sm-5">
+											<div class="product-price">${dto.prd_price}</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</button>
+						</button>
+					</c:forEach>
+					
+					-->
+					
+					
+					
+					
+					
+					
+					<!--  
+					<c:forEach items="${list}" var="dto">
+						<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
+							<div class="single-product-item">
+								<div class="single-product-img">
+								<img src="assets/images/product/p1.jpg" alt="product_image">
+									<c:when test="${empty dto.prd_image}">
+						                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default Image" width="300">
+						            </c:when>
+						            <c:otherwise>
+						                <img src="${pageContext.request.contextPath}/upload/${dto.prd_image}" alt="Product Image" width="300">
+						            </c:otherwise>
+								</div>
+								<div class="single-product-txt">
+									<div class="product-name">${dto.prd_title}</div>
+									<div class="row">
+										<div class="col-sm-5">
+											<div class="product-price">${dto.prd_price}</div>
+										</div>
+										<div class="col-sm-7">
+											<div class="product-map-icon">
+												<a href="#"><i data-feather="heart"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</button>
+					</c:forEach>
+					-->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<!--
+					
 					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
 						<div class="single-product-item">
 							<div class="single-product-img">
@@ -217,8 +270,19 @@
 							</div>
 						</div>
 					</button>
+					
+					-->
+
+
+					
 				</div>
 			</div>
+			<div class="read-more">
+				<button class="read-more-btn" id="load" onclick="window.location.href='#'">
+					더보기
+				</button>
+			</div>
+			
 		</div><!--/.container-->
 	</section>
 	<!--상품 끝 -->
@@ -278,9 +342,6 @@
 	<!-- counter js -->
 	<script src="assets/js/jquery.counterup.min.js"></script>
 	<script src="assets/js/waypoints.min.js"></script>
-
-	<!--slick.min.js-->
-	<script src="assets/js/slick.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 

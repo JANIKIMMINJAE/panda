@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.study.springboot.jdbc.ProductDAO">
+	<insert id="writeDao" parameterType="java.util.HashMap">
+		INSERT INTO product (product_seq, user_seq, prd_title, prd_ctnt, prd_at, prd_hit, prd_use, prd_price, prd_latitude, prd_longitude, prd_address, prd_maptext, prd_use_yn)
+			VALUES (product_seq.nextval, #{item1}, #{item2}, #{item3}, SYSDATE, 0, 'E', #{item4}, #{item5}, #{item6}, #{item7}, #{item8}, 'Y' )
+	</insert>
+	<select id="selectDao" resultType="com.study.springboot.jdbc.ProductDTO">
+		SELECT * from product ORDER BY prd_at DESC
+	</select>
+</mapper>

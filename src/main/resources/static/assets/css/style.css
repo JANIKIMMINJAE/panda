@@ -108,6 +108,30 @@ html,body{height: 100%;}
 .fix{position: relative;clear: both;}
 /*=============Style css=========*/
 
+.read-more {
+	margin-top: 10px;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	
+}
+.read-more-btn {
+    font-size:  17px;
+    color:  #fff;
+    width:  150px;
+    height:  50px;
+    background:  #ff545a;
+    text-transform:  capitalize;
+    border-radius: 3px;
+    -webkit-transition: 0.3s linear; 
+    -moz-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear; 
+    -o-transition: 0.3s linear; 
+    transition: 0.3s linear;
+}
+
+.read-more-btn:hover{/*background: #fd4043;*/background: #f43032;}
 
 
 /*-------------------------------------
@@ -166,9 +190,9 @@ nav.navbar.bootsnav ul.nav > li > a {
     font-weight: 500;
     font-weight: bold;
     text-transform:uppercase;
-    -webkit-transition: 0.3s linear; 
+    -webkit-transition: 0.3s linear;
     -moz-transition: 0.3s linear; 
-    -ms-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear;
     -o-transition: 0.3s linear;
     transition: 0.3s linear;
 }
@@ -214,47 +238,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 /*-------------------------------------
         3.  Main-banner
 --------------------------------------*/
-/*
 .main-banner {
     position: relative;
-    background:url(../images/main-banner/banner.jpg)no-repeat;
+    background:url(../images/main-banner/banner.png)no-repeat;
     background-position:center;
-    background-size:30% 100%;
+    background-size:60% 140%;
     text-align: center;
     height:500px;
     z-index: 1;
-}
-*/
-.main-banner {
-  background: url("../images/main-banner/m1.jpg"), url("../images/main-banner/m2.jpg"), url("../images/main-banner/m3.jpg");
-  background-size: cover; /* 이미지를 화면에 맞게 확대/축소 */
-  background-attachment: fixed; /* 스크롤에 고정되도록 설정 */
-
-  /* 이미지 간겅의 간격 및 위치 조절 */
-  background-position: top left, top right, bottom right;
-
-  /* 이미지 반복 설정: 이미지 1부터 순차적으로 반복 */
-  background-repeat: repeat, repeat, repeat;
-}
-
-#prev-button,
-#next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-#prev-button {
-  left: 10px;
-}
-
-#next-button {
-  right: 10px;
 }
 
 /*-------------------------------------
@@ -262,11 +253,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 --------------------------------------*/
 /* 상품 소개 배경색 */
 .product{
-    padding:117px 0 95px;
+    padding:40px 0 20px;
     background: #f8fafb;
 }
 
-.product-content{margin-top: 78px;}
+.product-content{margin-top: 40px;}
 
 /* 상품 설명 */
 .single-product-item {
