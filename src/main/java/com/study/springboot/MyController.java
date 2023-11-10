@@ -23,14 +23,13 @@ public class MyController {
 	@RequestMapping("/")
 	public String root(Model model) throws Exception{
 
-		return "mainhome";
+		return "redirect:list";
 	}
 
-	@RequestMapping("/mainhome")
+	@RequestMapping("/list")
 	public String plist(Model model)
 	{
 		List<ProductDTO> productList = pdao.selectDao();
-		System.out.println(productList);
 		for (ProductDTO product : productList) {
 		    int productSeq = product.getProduct_seq();
 		    FilesDTO filesDTO = fdao.viewDao(productSeq);
@@ -42,4 +41,5 @@ public class MyController {
 		
 		return "/mainhome";
 	}
+	
 }

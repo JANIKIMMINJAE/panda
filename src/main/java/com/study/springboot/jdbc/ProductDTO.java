@@ -18,4 +18,5 @@ public class ProductDTO {
 	private String prd_maptext;
 	private String prd_use_yn;
 	private String prd_image;
+	
 }

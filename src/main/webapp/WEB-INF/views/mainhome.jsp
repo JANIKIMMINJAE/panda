@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,9 +59,9 @@
 					<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 						<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 							<li>
-								<form action="https://search.naver.com/search.naver">
+								<form onclick="https://search.naver.com/search.naver">
 									<div class="search-form">
-						  				<input type="text" name="query" placeholder="상품이나 지역을 검색해보세요">
+						  				<input type="text" name="query" placeholder="상품이나 지역을 검색해보세요" maxlength="50">
 						  					<button type="submit"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></button>
 									</div>
 								</form>
@@ -93,192 +94,46 @@
 			</div><!--/.section-header-->
 			<div class="product-content">
 				<div class="row">
-						
-					<!--  
 					<c:forEach items="${list}" var="dto">
-						<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
-							<div class="single-product-item">
-								<div class="single-product-img">
-									<c:choose>
-										<c:when test="${empty dto.prd_image}">
-							                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default Image" width="300">
-							            </c:when>
-							            <c:otherwise>
-							                <img src="${pageContext.request.contextPath}/upload/${dto.prd_image}" alt="Product Image" width="300">
-							            </c:otherwise>
-							        </c:choose>
-								</div>
-								<div class="single-product-txt">
-									<div class="product-name">${dto.prd_title}</div>
-									<div class="row">
-										<div class="col-sm-5">
-											<div class="product-price">${dto.prd_price}</div>
-										</div>
+						<div class="product-use">
+							<button class="col-md-4 col-sm-6" onclick="window.location.href='product_view'">
+								<div class="single-product-item">
+									<div class="single-product-img">
+										<c:choose>
+											<c:when test="${empty dto.prd_image}">
+								                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default_Image">
+								            </c:when>
+								            <c:otherwise>
+								                <img src="${pageContext.request.contextPath}/upload/${dto.prd_image}" alt="Product_Image">
+								            </c:otherwise>
+							        	</c:choose>
 									</div>
-								</div>
-							</div>
-						</button>
-					</c:forEach>
-					
-					-->
-					
-					
-					
-					
-					
-					
-					<!--  
-					<c:forEach items="${list}" var="dto">
-						<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
-							<div class="single-product-item">
-								<div class="single-product-img">
-								<img src="assets/images/product/p1.jpg" alt="product_image">
-									<c:when test="${empty dto.prd_image}">
-						                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default Image" width="300">
-						            </c:when>
-						            <c:otherwise>
-						                <img src="${pageContext.request.contextPath}/upload/${dto.prd_image}" alt="Product Image" width="300">
-						            </c:otherwise>
-								</div>
-								<div class="single-product-txt">
-									<div class="product-name">${dto.prd_title}</div>
-									<div class="row">
-										<div class="col-sm-5">
-											<div class="product-price">${dto.prd_price}</div>
+									
+									<div class="single-product-txt">
+										<div class="product-name">
+											${dto.prd_title}
 										</div>
-										<div class="col-sm-7">
-											<div class="product-map-icon">
-												<a href="#"><i data-feather="heart"></i></a>
+										<div class="row">
+											<div class="col-sm-5">
+												<div class="product-price">
+													<fmt:formatNumber type="number" maxFractionDigits="3" pattern="#,##0원" value="${dto.prd_price}"/>
+												</div>
+											</div>
+											<div class="col-sm-7">
+												<div class="product-map-icon">
+													<a href="#"><i data-feather="heart"></i></a>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</button>
+							</button>
+						</div>
 					</c:forEach>
-					-->
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					<!--
-					
-					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
-						<div class="single-product-item">
-							<div class="single-product-img">
-								<img src="assets/images/product/p2.jpg" alt="explore image">
-							</div>
-							<div class="single-product-txt">
-								<div class="product-name">아이폰</div>
-								<div class="row">
-									<div class="col-sm-5">
-										<div class="product-price">700,000원</div>
-									</div>
-									<div class="col-sm-7">
-										<div class="product-map-icon">
-											<a href="#"><i data-feather="heart"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</button>
-					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
-						<div class="single-product-item">
-							<div class="single-product-img">
-								<img src="assets/images/product/p3.jpg" alt="explore image">
-							</div>
-							<div class="single-product-txt">
-								<div class="product-name">자켓</div>
-								<div class="row">
-									<div class="col-sm-5">
-										<div class="product-price">100,000원</div>
-									</div>
-									<div class="col-sm-7">
-										<div class="product-map-icon">
-											<a href="#"><i data-feather="heart"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</button>
-					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
-						<div class="single-product-item">
-							<div class="single-product-img">
-								<img src="assets/images/product/p4.jpg" alt="explore image">
-							</div>
-							<div class="single-product-txt">
-								<div class="product-name">갤럭시폰</div>
-								<div class="row">
-									<div class="col-sm-5">
-										<div class="product-price">500,000원</div>
-									</div>
-									<div class="col-sm-7">
-										<div class="product-map-icon">
-											<a href="#"><i data-feather="heart"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</button>
-					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
-						<div class="single-product-item">
-							<div class="single-product-img">
-								<img src="assets/images/product/p5.jpg" alt="explore image">
-							</div>
-							<div class="single-product-txt">
-								<div class="product-name">신발</div>
-								<div class="row">
-									<div class="col-sm-5">
-										<div class="product-price">200,000원</div>
-									</div>
-									<div class="col-sm-7">
-										<div class="product-map-icon">
-											<a href="#"><i data-feather="heart"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</button>
-					<button class="col-md-4 col-sm-6" onclick="window.location.href='#'">
-						<div class="single-product-item">
-							<div class="single-product-img">
-								<img src="assets/images/product/p6.jpg" alt="explore image">
-							</div>
-							<div class="single-product-txt">
-								<div class="product-name">랜턴</div>
-								<div class="row">
-									<div class="col-sm-5">
-										<div class="product-price">100,000원</div>
-									</div>
-									<div class="col-sm-7">
-										<div class="product-map-icon">
-											<a href="#"><i data-feather="heart"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</button>
-					
-					-->
-
-
-					
 				</div>
 			</div>
 			<div class="read-more">
-				<button class="read-more-btn" id="load" onclick="window.location.href='#'">
+				<button class="read-more-btn" id="load" a href="#">
 					더보기
 				</button>
 			</div>

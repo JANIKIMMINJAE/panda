@@ -15,6 +15,7 @@ font-family: 'Roboto', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+
 *{
     padding: 0;
     margin: 0;
@@ -251,6 +252,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 /*-------------------------------------
         4. Product
 --------------------------------------*/
+.product-use {
+	display: none;
+}
+
 /* 상품 소개 배경색 */
 .product{
     padding:40px 0 20px;
@@ -273,17 +278,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 }
 
 /* 상품이미지 설정 */
-.single-product-img{position:relative;overflow: hidden;}
-
-.single-product-img:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(162,172,177,.2);
+.single-product-img {
+	position:relative;
+	overflow: hidden;
+	width: 358px;
+    height: 358px;
 }
+
 /* 메인페이지 상품 설명 간격 */
 .single-product-txt {
     padding: 26px 25px 24px 15px;
