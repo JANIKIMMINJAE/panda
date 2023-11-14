@@ -11,4 +11,9 @@
 	<select id="selectDao" resultType="com.study.springboot.jdbc.ProductDTO">
 		SELECT * from product ORDER BY prd_at DESC
 	</select>
+	<select id="searchDao" resultType="com.study.springboot.jdbc.ProductDTO" parameterType="java.lang.String">
+	    SELECT * FROM product
+	    WHERE prd_title LIKE '%'||#{title}||'%'
+	    ORDER BY prd_at DESC
+	</select>
 </mapper>

@@ -105,66 +105,56 @@
 		<div class="clearfix"></div>
 	</section><!-- /.top-area-->
 	
-	<!--메인 배너 시작 -->
-	<section id="home" class="main-banner">
-	</section>
-	<!--메인 배너 끝 -->
-
-	<!--상품 시작 -->
-	<section id="product" class="product">
-		<div class="container">
-			<div class="section-header">
-				<h2>최신매물</h2>
-			</div><!--/.section-header-->
-			<div class="product-content">
-				<div class="row">
-					<c:forEach items="${list}" var="dto">
-						<div class="product-use">
-							<button class="col-md-4 col-sm-6" action="/view">
-								<div class="single-product-item">
-									<div class="single-product-img">
-										<c:choose>
-											<c:when test="${empty dto.prd_image}">
-								                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default_Image">
-								            </c:when>
-								            <c:otherwise>
-								                <img src="${pageContext.request.contextPath}/upload/${dto.prd_image}" alt="Product_Image">
-								            </c:otherwise>
-							        	</c:choose>
-									</div>
-									<div class="single-product-txt">
-										<div class="product-name">
-											${dto.prd_title}
-										</div>
-										<div class="row">
-											<div class="col-sm-5">
-												<div class="product-price">
-													<fmt:formatNumber type="number" maxFractionDigits="3" pattern="#,##0원" value="${dto.prd_price}"/>
-												</div>
-											</div>
-											<div class="col-sm-7">
-												<div class="product-map-icon">
-													<a href="#"><i data-feather="heart"></i></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</button>
+	<!--상품 뷰 시작 -->
+	
+	
+	<section id="product-view">
+		<div class="container" style="display:flex; justify-content:center;">
+			<div class="row">
+				<div class="single-product-view-item">
+					<div class="single-product-view-img">
+						<img src="/upload/p2.jpg" style="object-fit:cover; width:100%;">
+					</div>
+					<div class="single-product-view-txt">
+						<div class="nickname">
+							닉네임
 						</div>
-					</c:forEach>
+					    <div class="region-name">서울시 강남구 신사동</div>
+					    <div class="product-time">등록일 : 2023-11-14</div>
+					    <div class="clearfix"></div>
+						<hr>
+						<div class="col" style="float:left;">
+							<div class="product-title">
+								아이폰
+							</div>
+							<div class="product-price">
+								100,000원
+							</div>
+						</div>
+						<button class="cht-btn" onclick="#">
+							채팅하기
+						</button>
+						<div class="clearfix"></div>
+						<div class="product-content">
+							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
+							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
+							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
+							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
+							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
+						</div>
+						<div class="product-view-icon">
+							<a href="#"><i data-feather="heart"></i></a>
+							찜 54 ∙ 조회 1811
+						</div>
+						<hr>
+					</div>
 				</div>
 			</div>
-			
-			<div class="read-more">
-				<button class="read-more-btn" id="load">
-					더보기
-				</button>
-			</div>
-			
-		</div><!--/.container-->
+		</div>
 	</section>
-	<!--상품 끝 -->
+
+
+	<!--상품 뷰 끝 -->
 
 	<!--하단바 시작-->
 	<footer id="footer" class="footer">

@@ -38,8 +38,8 @@ $(document).ready(function(){
 					alert("더이상 존재하지 않습니다."); // 컨텐츠 없을시 alert 창 띄우기 
 				}
     		});
+    		
+    		
 		});
 		
-
-	
 });

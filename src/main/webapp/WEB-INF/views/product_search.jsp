@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<%@ page import="java.io.PrintWriter"%>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
@@ -39,15 +40,12 @@
 
 </head>
 <body>
-
+	
 	<%
-	//로그인이 된 사람들은 로그인정보를 담을 수 있도록한다.
-	String user_id = null;
-	//만약에 현재 세션이 존재한다면
-	if (session.getAttribute("user_id") != null) {
-		//그 아이디값을 받아서 userID인스턴스로 관리할 수 있도록 한다.
-		user_id = (String) session.getAttribute("user_id");
-	}
+		String user_id = null;
+		if (session.getAttribute("user_id") != null) {//주어진 userID에 연결된 속성값을 얻어낸다.
+			user_id = (String) session.getAttribute("user_id");
+		}
 	%>
 	
 	<section class="top-area">
@@ -72,7 +70,7 @@
 							<li>
 								<form action="/search">
 									<div class="search-form">
-						  				<input type="text" name="title" placeholder="상품이나 지역을 검색해보세요" maxlength="50">
+						  				<input type="text" name="query" placeholder="상품이나 지역을 검색해보세요" maxlength="50">
 						  					<button type="submit"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></button>
 									</div>
 								</form>
@@ -104,23 +102,18 @@
 		</div><!--/.header-area-->
 		<div class="clearfix"></div>
 	</section><!-- /.top-area-->
-	
-	<!--메인 배너 시작 -->
-	<section id="home" class="main-banner">
-	</section>
-	<!--메인 배너 끝 -->
 
 	<!--상품 시작 -->
 	<section id="product" class="product">
 		<div class="container">
 			<div class="section-header">
-				<h2>최신매물</h2>
+				<h2>검색결과</h2>
 			</div><!--/.section-header-->
 			<div class="product-content">
 				<div class="row">
 					<c:forEach items="${list}" var="dto">
 						<div class="product-use">
-							<button class="col-md-4 col-sm-6" action="/view">
+							<button class="col-md-4 col-sm-6" onclick="window.location.href='product_view'">
 								<div class="single-product-item">
 									<div class="single-product-img">
 										<c:choose>
