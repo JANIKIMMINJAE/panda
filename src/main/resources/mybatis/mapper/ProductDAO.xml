@@ -16,4 +16,8 @@
 	    WHERE prd_title LIKE '%'||#{title}||'%'
 	    ORDER BY prd_at DESC
 	</select>
+	<select id="viewProduct" resultType="com.study.springboot.jdbc.ProductDTO">
+        SELECT * FROM product
+		WHERE product_seq = #{productSeq}
+    </select>
 </mapper>

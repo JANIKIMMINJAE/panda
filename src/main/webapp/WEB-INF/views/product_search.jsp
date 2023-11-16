@@ -68,9 +68,9 @@
 					<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 						<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 							<li>
-								<form action="/search">
+								<form action="/search" method="get">
 									<div class="search-form">
-						  				<input type="text" name="query" placeholder="상품이나 지역을 검색해보세요" maxlength="50">
+						  				<input type="text" name="title" placeholder="상품이나 지역을 검색해보세요" maxlength="50">
 						  					<button type="submit"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></button>
 									</div>
 								</form>
@@ -113,37 +113,40 @@
 				<div class="row">
 					<c:forEach items="${list}" var="dto">
 						<div class="product-use">
-							<button class="col-md-4 col-sm-6" onclick="window.location.href='product_view'">
-								<div class="single-product-item">
-									<div class="single-product-img">
-										<c:choose>
-											<c:when test="${empty dto.prd_image}">
-								                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default_Image">
-								            </c:when>
-								            <c:otherwise>
-								                <img src="${pageContext.request.contextPath}/upload/${dto.prd_image}" alt="Product_Image">
-								            </c:otherwise>
-							        	</c:choose>
-									</div>
-									<div class="single-product-txt">
-										<div class="product-name">
-											${dto.prd_title}
+							<form action="/view" method="get">
+								<input type="hidden" name="productSeq" value="${dto.product_seq}" />
+								<button class="col-md-4 col-sm-6">
+									<div class="single-product-item">
+										<div class="single-product-img">
+											<c:choose>
+												<c:when test="${empty dto.prd_image}">
+									                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default_Image">
+									            </c:when>
+									            <c:otherwise>
+									                <img src="${pageContext.request.contextPath}/upload/${dto.prd_image}" alt="Product_Image">
+									            </c:otherwise>
+								        	</c:choose>
 										</div>
-										<div class="row">
-											<div class="col-sm-5">
-												<div class="product-price">
-													<fmt:formatNumber type="number" maxFractionDigits="3" pattern="#,##0원" value="${dto.prd_price}"/>
+										<div class="single-product-txt">
+											<div class="product-name">
+												${dto.prd_title}
+											</div>
+											<div class="row">
+												<div class="col-sm-5">
+													<div class="product-price">
+														<fmt:formatNumber type="number" maxFractionDigits="3" pattern="#,##0원" value="${dto.prd_price}"/>
+													</div>
+												</div>
+												<div class="col-sm-7">
+													<div class="product-map-icon">
+														<a href="#"><i data-feather="heart"></i></a>
+													</div>
 												</div>
 											</div>
-											<div class="col-sm-7">
-												<div class="product-map-icon">
-													<a href="#"><i data-feather="heart"></i></a>
-												</div>
-											</div>
 										</div>
 									</div>
-								</div>
-							</button>
+								</button>
+							</form>
 						</div>
 					</c:forEach>
 				</div>

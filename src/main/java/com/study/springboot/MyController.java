@@ -13,6 +13,9 @@ import com.study.springboot.jdbc.FilesDTO;
 import com.study.springboot.jdbc.ProductDAO;
 import com.study.springboot.jdbc.ProductDTO;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class MyController {
 	
@@ -24,7 +27,7 @@ public class MyController {
 	@RequestMapping("/")
 	public String root(Model model) throws Exception{
 
-		return "redirect:view";
+		return "redirect:list";
 	}
 
 	@RequestMapping("/list")
@@ -61,11 +64,21 @@ public class MyController {
     }
 	
 	@RequestMapping("/view")
-	public String pview(Model model)
-	{
+    public String pview(@RequestParam("product_seq") int productSeq, Model model) {
+		 
+        // 특정 제품의 상세 정보 조회
+        ProductDTO product = pdao.viewProduct(productSeq);
 
+        // 해당 제품의 이미지 정보 조회
+        FilesDTO filesDTO = fdao.viewDao(productSeq);
+        String imageName = (filesDTO != null) ? filesDTO.getFilesName() : null;
+        product.setPrd_image(imageName);
 
+        // 모델에 제품 정보 추가
+        model.addAttribute("product", product);
+        
         return "/product_view";
     }
+	
 	
 }

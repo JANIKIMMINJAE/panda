@@ -49,7 +49,6 @@
 		user_id = (String) session.getAttribute("user_id");
 	}
 	%>
-	
 	<section class="top-area">
 		<div class="header-area">
 			<!-- Start Navigation -->
@@ -113,22 +112,30 @@
 			<div class="row">
 				<div class="single-product-view-item">
 					<div class="single-product-view-img">
-						<img src="/upload/p2.jpg" style="object-fit:cover; width:100%;">
+						<c:choose>
+							<c:when test="${empty product.prd_image}">
+				                <img src="${pageContext.request.contextPath}/upload/default_image.png" alt="Default_Image" style="object-fit:cover; width:100%;">
+				            </c:when>
+				            <c:otherwise>
+				                <img src="${pageContext.request.contextPath}/upload/${product.prd_image}" alt="Product_Image" style="object-fit:cover; width:100%;">
+				            </c:otherwise>
+			        	</c:choose>
+						<!-- <img src="/upload/p2.jpg" style="object-fit:cover; width:100%;"> -->
 					</div>
 					<div class="single-product-view-txt">
 						<div class="nickname">
 							닉네임
 						</div>
-					    <div class="region-name">서울시 강남구 신사동</div>
-					    <div class="product-time">등록일 : 2023-11-14</div>
+					    <div class="region-name">${product.prd_address}</div>
+					    <div class="product-time">등록일 : ${product.prd_at}</div>
 					    <div class="clearfix"></div>
 						<hr>
 						<div class="col" style="float:left;">
 							<div class="product-title">
-								아이폰
+								${product.prd_title}
 							</div>
 							<div class="product-price">
-								100,000원
+								${product.prd_price}
 							</div>
 						</div>
 						<button class="cht-btn" onclick="#">
@@ -136,15 +143,11 @@
 						</button>
 						<div class="clearfix"></div>
 						<div class="product-content">
-							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
-							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
-							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
-							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
-							아이폰 팝니다 아이폰 팔아요아이폰 팝니다 아이폰 팔아요
+							${product.prd_ctnt}
 						</div>
 						<div class="product-view-icon">
 							<a href="#"><i data-feather="heart"></i></a>
-							찜 54 ∙ 조회 1811
+							찜 54 ∙ 조회 ${product.prd_hit}
 						</div>
 						<hr>
 					</div>

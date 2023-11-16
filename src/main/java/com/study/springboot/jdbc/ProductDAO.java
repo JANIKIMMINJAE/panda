@@ -12,4 +12,5 @@ public interface ProductDAO {
 	public int writeDao(Map<String, String> map);
 	public List<ProductDTO> selectDao();
 	public List<ProductDTO> searchDao(@Param("title")String title);
+    public ProductDTO viewProduct(@Param("productSeq")int productSeq);
 }
